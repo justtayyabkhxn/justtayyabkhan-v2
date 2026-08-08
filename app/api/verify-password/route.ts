@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const CLIENT_PASSWORD = "1122";
+const CLIENT_PASSWORD = process.env.ADMIN_PASSWORD;
 
 const LIMIT = 5;
 const WINDOW_MS = 5 * 60 * 1000; // 5 minutes
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
   }
 
   const { password } = await req.json();
-  const ok = password === CLIENT_PASSWORD;
+  const ok = Boolean(CLIENT_PASSWORD) && password === CLIENT_PASSWORD;
 
   if (!ok) {
     const current = attempts.get(ip) ?? { count: 0, resetAt: now + WINDOW_MS };

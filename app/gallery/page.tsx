@@ -2,6 +2,7 @@ import { readdir } from 'fs/promises'
 import path from 'path'
 import sharp from 'sharp'
 import dynamic from 'next/dynamic'
+import { RouteGuard } from '@/components/route-guard'
 
 export type GalleryImage = { url: string; width: number; height: number }
 
@@ -36,5 +37,10 @@ export default async function GalleryPage() {
     // imgs directory not found
   }
 
-  return <GalleryCanvas images={images} />
+  return (
+    <>
+      <RouteGuard route="/gallery" />
+      <GalleryCanvas images={images} />
+    </>
+  )
 }

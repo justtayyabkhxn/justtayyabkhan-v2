@@ -6,6 +6,7 @@ import Link from "next/link";
 import ProfilePic from "@/public/profile.png";
 import { Particles } from "@/components/ui/particles";
 import { Nav } from "@/components/nav";
+import { RouteGuard } from "@/components/route-guard";
 import { ChessStats } from "@/components/chess-stats";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
@@ -43,6 +44,7 @@ export default function AboutPage() {
         size={0.6}
       />
 
+      <RouteGuard route="/about" />
       <Nav current="/about" />
 
       <div className="mx-auto max-w-2xl px-4 pt-24 sm:pt-28 pb-16">

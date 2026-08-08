@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Home, Image as ImageIcon, MapPin, User } from "lucide-react";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+import { DEFAULT_NAV_CONFIG, NavConfig, hrefToKey } from "@/lib/nav-links";
 
 const GALLERY_PREVIEWS = [
   "/imgs/IMG_20260403_170012727_HDR.jpg",
@@ -25,11 +26,19 @@ export const Nav = ({ current }: { current?: string }) => {
   const [collapsed, setCollapsed] = useState(false);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [galleryHover, setGalleryHover] = useState(false);
+  const [config, setConfig] = useState<NavConfig | null>(null);
   const previewImg = useRef(GALLERY_PREVIEWS[0]);
   const lastY = useRef(0);
 
   const onMouseMove = useCallback((e: MouseEvent) => {
     setCursor({ x: e.clientX, y: e.clientY });
+  }, []);
+
+  useEffect(() => {
+    fetch("/api/nav-config", { cache: "no-store" })
+      .then((r) => r.json())
+      .then((c: NavConfig) => setConfig(c))
+      .catch(() => setConfig(DEFAULT_NAV_CONFIG));
   }, []);
 
   useEffect(() => {
@@ -65,7 +74,14 @@ export const Nav = ({ current }: { current?: string }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const inlineLinks = ALL_LINKS;
+  // Home always shows. Toggleable links are hidden until the config loads so
+  // a disabled link never flashes on screen, then only the enabled ones render.
+  const inlineLinks = ALL_LINKS.filter((link) => {
+    const key = hrefToKey(link.href);
+    if (!key) return true; // home
+    if (!config) return false;
+    return config[key] !== false;
+  });
 
   return (
     <>

@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Highlighter } from "@/components/ui/highlighter";
 import { Particles } from "@/components/ui/particles";
 import { Nav } from "@/components/nav";
+import { RouteGuard } from "@/components/route-guard";
 import { PLACES } from "@/data/places";
 
 export default function PlacesPage() {
@@ -95,6 +96,7 @@ export default function PlacesPage() {
         </div>
       )}
 
+      <RouteGuard route="/places" />
       <Nav current="/places" />
 
       {/* content — left aligned */}
