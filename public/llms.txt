@@ -1,0 +1,45 @@
+# Tayyab Khan — Portfolio
+
+> Full-Stack Developer based in New Delhi, India. Physics major (B.Sc. Physics, MCA — Aligarh Muslim University) who pivoted to web development. Builds scalable web apps with React, Next.js, and Node.js, plus Shopify, WordPress, and Webflow sites. Open to freelance work.
+
+## Currently
+
+- Creative Web Developer @ Volume Creative Agency, Connaught Place, New Delhi
+- Open to freelance — full-stack apps, Shopify, Webflow
+
+## Pages
+
+- [Home](https://justtayyabkhan.com/) — Intro, experience, skills, education, projects, contact
+- [About](https://justtayyabkhan.com/about) — Extended bio, stack, and contact info
+- [Gallery](https://justtayyabkhan.com/gallery) — Interactive 3D photo gallery built with Three.js
+- [Places](https://justtayyabkhan.com/places) — Travel log of visited and wishlist destinations
+
+## Skills
+
+React, Next.js, TypeScript, Tailwind CSS, Node.js, Express, MySQL, MongoDB, PostgreSQL, C++, Java, Python, Shopify, Webflow, WordPress, Git, GitHub, Postman, Docker, Prisma, WebSockets
+
+## Projects
+
+- VOLUME — VOLUME's official website and CMS — immersive animations via Framer Motion and GSAP, with a drag-and-drop admin dashboard. (Next.js, Tailwind CSS, Framer Motion, Node.js, Express.js, MongoDB) — https://www.volume.in/
+- watchlr — A movie and show recommendation platform with AI-powered suggestions and profile-based taste tracking. (Next.js, TypeScript, Tailwind CSS, MongoDB) — https://watchlr.justtayyabkhan.com/
+- wePass — A zero-knowledge password manager that encrypts credentials client-side using AES-256-GCM and PBKDF2. (Next.js, TypeScript, Tailwind CSS, TanStack, Prisma, PostgreSQL, Web Crypto API) — https://wepass.vercel.app/
+- FarazPsd Portfolio — A responsive portfolio website for a creative designer, showcasing work, skills, and contact information. (Next.js, TypeScript, Tailwind CSS) — https://farazpsd.vercel.app/
+- Find My Tutor Live — A live-learning platform for real-time tuition sessions with WebRTC tutor-student connections, payments, recordings, and chat. (Next.js, TypeScript, Tailwind CSS, Node.js, MongoDB, WebRTC, WebSockets) — https://live.findmytutorindia.com/
+- Find My Tutor India — A tutor discovery website with tutor profiles, search, and an admin panel to manage listings and platform operations. (Next.js, TypeScript, Tailwind CSS, Node.js, MongoDB) — https://findmytutorindia.com/
+- MyBudgetory — Personal finance tracker with transaction management, monthly analytics, and automated WhatsApp debt reminders. (Next.js, TypeScript, Tailwind CSS, MongoDB) — https://mybudgetory.vercel.app/
+- TrackR — Platform for reporting and reclaiming lost items — location-based search, admin moderation, secure auth. (Node.js, React, MongoDB, Express) — https://github.com/justtayyabkhxn/TrackR
+- Sticko — Notes and to-do PWA with task management and data export, fully responsive and offline-capable. (Next.js, TypeScript, Tailwind CSS, Node.js, Express, MongoDB) — https://stickonotes.vercel.app/
+- Pomero — Pomodoro timer with customisable intervals, task tracking, and progress reports. (HTML, CSS, JavaScript) — https://justtayyabkhxn.github.io/pomero/
+- Instant QR Code Generator — Instant QR code generator for URLs and text, with optional account-based customisation. (Next.js, TypeScript, MongoDB, Tailwind CSS, JWT) — https://myqr-gen.vercel.app/
+
+## Contact
+
+- Email: tayyabkhangk4734@gmail.com
+- LinkedIn: https://www.linkedin.com/in/justtayyabkhan/
+- GitHub: https://github.com/justtayyabkhxn
+- Twitter/X: https://x.com/justtayyabkhxn
+- WhatsApp: https://api.whatsapp.com/send?phone=918279961679
+
+## API
+
+- Machine-readable profile (for agents/LLMs): https://justtayyabkhan.com/api/me

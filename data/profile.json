@@ -1,0 +1,71 @@
+{
+  "name": "Tayyab Khan",
+  "role": "Full-Stack Developer",
+  "location": "New Delhi, India",
+  "siteUrl": "https://justtayyabkhan.com",
+  "bio": "Physics major (B.Sc. Physics, MCA — Aligarh Muslim University) who pivoted to web development. Builds scalable web apps with React, Next.js, and Node.js, plus Shopify, WordPress, and Webflow sites. Open to freelance work.",
+  "currently": [
+    "Creative Web Developer @ Volume Creative Agency, Connaught Place, New Delhi",
+    "Open to freelance — full-stack apps, Shopify, Webflow"
+  ],
+  "skills": {
+    "languages": ["C++", "Java", "Python"],
+    "web": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MySQL", "MongoDB", "PostgreSQL"],
+    "cms": ["Shopify", "Webflow", "WordPress"],
+    "tools": ["Git", "GitHub", "Postman", "Docker", "Prisma", "WebSockets"]
+  },
+  "experience": [
+    {
+      "company": "VOLUME Creative Agency",
+      "href": "https://www.volume.in/",
+      "role": "Creative Web Developer",
+      "location": "Connaught Place, New Delhi",
+      "start": "July 2025",
+      "end": "Present"
+    }
+  ],
+  "education": [
+    {
+      "school": "Aligarh Muslim University",
+      "href": "https://www.amu.ac.in/",
+      "degree": "Master in Computer Applications",
+      "location": "Aligarh, UP",
+      "start": "2023",
+      "end": "2025"
+    },
+    {
+      "school": "Aligarh Muslim University",
+      "href": "https://www.amu.ac.in/",
+      "degree": "Bachelor of Science (Physics)",
+      "location": "Aligarh, UP",
+      "start": "2020",
+      "end": "2023"
+    }
+  ],
+  "projects": [
+    { "title": "VOLUME", "href": "https://www.volume.in/", "category": "professional", "description": "VOLUME's official website and CMS — immersive animations via Framer Motion and GSAP, with a drag-and-drop admin dashboard.", "technologies": ["Next.js", "Tailwind CSS", "Framer Motion", "Node.js", "Express.js", "MongoDB"] },
+    { "title": "watchlr", "href": "https://watchlr.justtayyabkhan.com/", "category": "personal", "description": "A movie and show recommendation platform with AI-powered suggestions and profile-based taste tracking.", "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB"] },
+    { "title": "wePass", "href": "https://wepass.vercel.app/", "category": "personal", "description": "A zero-knowledge password manager that encrypts credentials client-side using AES-256-GCM and PBKDF2.", "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Prisma", "PostgreSQL", "Web Crypto API"] },
+    { "title": "FarazPsd Portfolio", "href": "https://farazpsd.vercel.app/", "category": "personal", "description": "A responsive portfolio website for a creative designer, showcasing work, skills, and contact information.", "technologies": ["Next.js", "TypeScript", "Tailwind CSS"] },
+    { "title": "Find My Tutor Live", "href": "https://live.findmytutorindia.com/", "category": "freelance", "description": "A live-learning platform for real-time tuition sessions with WebRTC tutor-student connections, payments, recordings, and chat.", "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "WebRTC", "WebSockets"] },
+    { "title": "Find My Tutor India", "href": "https://findmytutorindia.com/", "category": "freelance", "description": "A tutor discovery website with tutor profiles, search, and an admin panel to manage listings and platform operations.", "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"] },
+    { "title": "MyBudgetory", "href": "https://mybudgetory.vercel.app/", "category": "personal", "description": "Personal finance tracker with transaction management, monthly analytics, and automated WhatsApp debt reminders.", "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB"] },
+    { "title": "TrackR", "href": "https://github.com/justtayyabkhxn/TrackR", "category": "personal", "description": "Platform for reporting and reclaiming lost items — location-based search, admin moderation, secure auth.", "technologies": ["Node.js", "React", "MongoDB", "Express"] },
+    { "title": "Sticko", "href": "https://stickonotes.vercel.app/", "category": "personal", "description": "Notes and to-do PWA with task management and data export, fully responsive and offline-capable.", "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"] },
+    { "title": "Pomero", "href": "https://justtayyabkhxn.github.io/pomero/", "category": "personal", "description": "Pomodoro timer with customisable intervals, task tracking, and progress reports.", "technologies": ["HTML", "CSS", "JavaScript"] },
+    { "title": "Instant QR Code Generator", "href": "https://myqr-gen.vercel.app/", "category": "personal", "description": "Instant QR code generator for URLs and text, with optional account-based customisation.", "technologies": ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "JWT"] }
+  ],
+  "pages": [
+    { "path": "/", "title": "Home", "description": "Intro, experience, skills, education, projects, contact" },
+    { "path": "/about", "title": "About", "description": "Extended bio, stack, and contact info" },
+    { "path": "/gallery", "title": "Gallery", "description": "Interactive 3D photo gallery built with Three.js" },
+    { "path": "/places", "title": "Places", "description": "Travel log of visited and wishlist destinations" }
+  ],
+  "contact": {
+    "email": "tayyabkhangk4734@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/justtayyabkhan/",
+    "github": "https://github.com/justtayyabkhxn",
+    "twitter": "https://x.com/justtayyabkhxn",
+    "whatsapp": "https://api.whatsapp.com/send?phone=918279961679"
+  }
+}
