@@ -6,6 +6,7 @@ import profile from "@/data/profile.json";
 // and CORS enabled so it can be fetched cross-origin from tools/agents.
 export async function GET() {
   const body = {
+    ...profile,
     "@context": "https://schema.org",
     "@type": "Person",
     name: profile.name,
@@ -19,7 +20,6 @@ export async function GET() {
       profile.contact.twitter,
     ],
     email: profile.contact.email,
-    ...profile,
   };
 
   return NextResponse.json(body, {
