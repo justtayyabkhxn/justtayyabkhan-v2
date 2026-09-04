@@ -8,6 +8,7 @@ const BASE_URL = "https://justtayyabkhan.com";
 const routes: { path: string; lastModified: string; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }[] = [
   { path: "", lastModified: "2026-07-17", changeFrequency: "monthly", priority: 1 },
   { path: "/about", lastModified: "2026-07-17", changeFrequency: "monthly", priority: 0.8 },
+  
   { path: "/gallery", lastModified: "2026-07-17", changeFrequency: "monthly", priority: 0.7 },
   { path: "/places", lastModified: "2026-07-17", changeFrequency: "monthly", priority: 0.6 },
 ];
