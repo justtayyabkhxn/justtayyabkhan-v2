@@ -99,7 +99,7 @@ export function ChessStats({ compact = false }: { compact?: boolean }) {
       className="w-full space-y-3"
     >
       <motion.h2 variants={fadeUp} className="font-mono text-[11px] tracking-widest text-brand">
-        // chess
+        {"// chess"}
       </motion.h2>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {[
