@@ -1,21 +1,30 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readFile, writeFile } from "fs/promises";
-import path from "path";
 import { DEFAULT_NAV_CONFIG, NavConfig, normalizeConfig } from "@/lib/nav-links";
+import { getDb } from "@/lib/mongodb";
 
 // Same admin password used across the site (see /api/verify-password).
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
-const CONFIG_PATH = path.join(process.cwd(), "data", "nav-config.json");
+// The nav config lives as a single document in this collection, keyed by a
+// fixed _id so there is always exactly one row to read/update.
+const COLLECTION = "nav-config";
+const DOC_ID = "nav";
+
+// The stored document is the NavConfig plus our string _id.
+type NavConfigDoc = NavConfig & { _id: string };
 
 export const dynamic = "force-dynamic";
 
 async function readConfig(): Promise<NavConfig> {
   try {
-    const raw = await readFile(CONFIG_PATH, "utf-8");
-    return normalizeConfig(JSON.parse(raw));
+    const db = await getDb();
+    const doc = await db
+      .collection<NavConfigDoc>(COLLECTION)
+      .findOne({ _id: DOC_ID });
+    // Missing doc → everything enabled. normalizeConfig strips _id and fills gaps.
+    return normalizeConfig(doc);
   } catch {
-    // Missing/corrupt file → fall back to everything enabled.
+    // No DB / connection error → fall back to everything enabled.
     return { ...DEFAULT_NAV_CONFIG };
   }
 }
@@ -42,10 +51,13 @@ export async function POST(req: NextRequest) {
   const config = normalizeConfig(body.config);
 
   try {
-    await writeFile(CONFIG_PATH, JSON.stringify(config, null, 2) + "\n", "utf-8");
+    const db = await getDb();
+    await db
+      .collection<NavConfigDoc>(COLLECTION)
+      .updateOne({ _id: DOC_ID }, { $set: config }, { upsert: true });
   } catch {
     return NextResponse.json(
-      { ok: false, error: "Could not persist config (read-only filesystem?)" },
+      { ok: false, error: "Could not persist config (database unavailable?)" },
       { status: 500 }
     );
   }
